@@ -4,14 +4,7 @@ import './Header.css';
 function Header() {
   return (
     <header className="header">
-      <h1>My React App</h1>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <h1>Guess One Piece Arc From 1 Image</h1>
     </header>
   );
 }

@@ -1,22 +1,11 @@
 .header {
-    background-color: #282c34;
-    padding: 20px;
-    color: white;
+    display: flex;
+    background-color: #0D0D0D;
+    color: #F2F2F2;
     text-align: center;
-}
-
-.header nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.header nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-.header nav ul li a {
-    color: white;
-    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    height: 33%;
+    font-size: 200%;
 }
   
