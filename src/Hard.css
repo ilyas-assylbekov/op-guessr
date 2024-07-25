@@ -1,0 +1,38 @@
+.hard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 150%;
+    color: #F2F2F2;
+    background-color: #403829;
+}
+
+.hard button {
+    padding: 1% 2%;
+    margin: 1% 0;
+    border: none;
+    border-radius: 15%;
+    background-color: #8C594D;
+    color: #F2F2F2;
+    font-size: 100%;
+    cursor: pointer;
+}
+
+.hard button:hover {
+    background-color: #0D0126;
+}
+
+.hard img {
+    width: 90%;
+    height: auto;
+    margin: 1%;
+}
+
+.hard input {
+    padding: 1% 2%;
+    margin: 1% 0;
+    border: none;
+    background-color: #F2F2F2;
+    font-size: 100%;
+}

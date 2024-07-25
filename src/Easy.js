@@ -23,18 +23,20 @@ function Easy() {
     const currentImageFilename = currentImagePath.split('/').pop().split('.')[0]; // Extract the filename
     console.log(currentImageFilename);
     const correctAnswer = easyImageTags[currentImageFilename];
+    
     if (inputValue === correctAnswer) {
-      setScore(score + 1);
+      setScore(score + 100);
       setCurrentImageIndex(currentImageIndex + 1);
     } else {
       setLives(lives - 1);
       if (lives <= 1) {
-        alert('Game Over. Your score is ' + score + '. Please refresh the page to play again.');
+        alert('Game Over. Your score is ' + score + '. Please refresh the page to play again. The correct answer was ' + correctAnswer);
         // Reset the game or navigate to another component
-      } else {
-        setCurrentImageIndex(currentImageIndex + 1);
       }
+      // Do not change the currentImageIndex if the answer is wrong
+      alert('Wrong answer. Try again.');
     }
+    
     setInputValue(''); // Clear input
   };
 
