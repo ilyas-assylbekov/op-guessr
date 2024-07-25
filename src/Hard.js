@@ -41,29 +41,35 @@ function Hard() {
   };
 
   return (
-    <div className="hard">
-      {shuffledImages.length > 0 && currentImageIndex < shuffledImages.length ? (
-        <>
-          <img src={shuffledImages[currentImageIndex]} alt="Current" />
-          <input 
-            type="text" 
-            placeholder="Type your answer" 
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            list="arc-names"
-          />
-          <datalist id="arc-names">
-            {arcNames.map(arc => <option key={arc} value={arc} />)}
-          </datalist>
-          <button onClick={handleAnswer}>Submit</button>
-          <p>Lives: {lives}</p>
-          <p>Score: {score}</p>
-        </>
-      ) : (
-        <p>Loading...</p>
-      )}
-    </div>
-  );
+      <div className="hard">
+        {shuffledImages.length > 0 && currentImageIndex < shuffledImages.length ? (
+          <>
+            <img src={shuffledImages[currentImageIndex]} alt="Current" />
+            <input 
+              type="text" 
+              placeholder="Type your answer" 
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              list="arc-names"
+            />
+            <datalist id="arc-names">
+              {arcNames.map(arc => <option key={arc} value={arc} />)}
+            </datalist>
+            <button onClick={handleAnswer}>Submit</button>
+            <div>
+              <p>Lives: {lives}</p>
+              <p>Score: {score}</p>
+            </div>
+          </>
+        ) : (
+          <div>
+            <p>No images left - You Won!</p>
+            <p>Lives: {lives}</p>
+            <p>Score: {score}</p>
+          </div>
+        )}
+      </div>
+    );
 }
 
 export default Hard;

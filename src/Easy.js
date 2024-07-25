@@ -60,7 +60,11 @@ function Easy() {
           <p>Score: {score}</p>
         </>
       ) : (
-        <p>Loading...</p>
+        <div>
+            <p>No images left - You Won!</p>
+            <p>Lives: {lives}</p>
+            <p>Score: {score}</p>
+        </div>
       )}
     </div>
   );
