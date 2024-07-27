@@ -19,6 +19,11 @@ function Easy() {
   }, []);
 
   const handleAnswer = () => {
+    if (!arcNames.includes(inputValue.trim().toLowerCase())) {
+      alert('Invalid answer. Please choose an option from the list.');
+      return;
+    }
+
     const currentImagePath = shuffledImages[currentImageIndex];
     const currentImageFilename = currentImagePath.split('/').pop().split('.')[0]; // Extract the filename
     console.log(currentImageFilename);
@@ -29,12 +34,14 @@ function Easy() {
       setCurrentImageIndex(currentImageIndex + 1);
     } else {
       setLives(lives - 1);
+      alert('Wrong answer. The correct answer was ' + correctAnswer);
       if (lives <= 1) {
-        alert('Game Over. Your score is ' + score + '. Please refresh the page to play again. The correct answer was ' + correctAnswer);
+        alert('Game Over. Your score is ' + score + '.');
         // Reset the game or navigate to another component
+        window.location.reload();
       }
       // Do not change the currentImageIndex if the answer is wrong
-      alert('Wrong answer. Try again.');
+      setCurrentImageIndex(currentImageIndex + 1);
     }
     
     setInputValue(''); // Clear input
